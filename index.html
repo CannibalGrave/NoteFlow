@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteFlow</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        img, video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Note Flow</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="#kepek">Képek</a></li>
+                <li><a href="#videok">Videók</a></li>
+                <li><a href="#leckek">Egyetemi leckék</a></li>
+                <li><a href="#elofizetesek">Előfizetések</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="kezdolap">
+            <h1>Üdvözlünk a NoteFlow-ban!</h1>
+            <p>Hozzáférhető tananyagok, jegyzetek és multimédiás tartalmak.</p>
+        </section>
+
+        <section id="kepek">
+            <h2>Képek</h2>
+            <p>Itt találhatók az oktatáshoz kapcsolódó képek.</p>
+            <img src="example-image.jpg" alt="Példa kép">
+            <img src="pelda.jpg" alt="Példa kép">
+        </section>
+
+        <section id="videok">
+            <h2>Videók</h2>
+            <p>Tekintsd meg az oktatóvideóinkat.</p>
+            <video controls>
+                <source src="example-video.mp4" type="video/mp4">
+                Az Ön böngészője nem támogatja a videó lejátszást.
+            </video>
+        </section>
+
+        <section id="leckek">
+            <h2>Egyetemi leckék</h2>
+            <p>Fedezd fel a hozzáférhető leckéket és tananyagokat!</p>
+            <ul>
+                <li><a href="lecke1.pdf" target="_blank">Lecke 1 - Bevezetés</a></li>
+                <li><a href="lecke2.pdf" target="_blank">Lecke 2 - Haladó témák</a></li>
+            </ul>
+        </section>
+
+        <section id="elofizetesek">
+            <h2>Előfizetések</h2>
+            <p>Válassza ki az igényeinek megfelelő csomagot:</p>
+            <ul>
+                <li>Alapcsomag: 25 RON/hó</li>
+                <li>Egyetemi csomag: 49 RON/hó</li>
+                <li>Családi csomag: 79 RON/hó</li>
+                <li>Prémium jegyzet: 250 RON/hó</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NoteFlow . Minden jog fenntartva.</p>
+    </footer>
+</body>
+</html>
