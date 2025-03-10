@@ -35,6 +35,14 @@
             color: black; /* Fekete linkek */
             text-decoration: none;
         }
+
+        /* Hamburger menü ikon */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 30px;
+        }
+
         main {
             padding: 20px;
         }
@@ -54,13 +62,26 @@
         /* Reszponzív beállítások */
         @media (max-width: 768px) {
             nav ul {
-                flex-direction: column;
-                text-align: center;
+                display: none; /* Elrejtjük a menüt alapértelmezetten */
+                flex-direction: row; /* A linkek vízszintesen */
+                width: 100%;
+                justify-content: space-around;
             }
+            
+            nav.active ul {
+                display: flex; /* Ha az aktív osztály van, akkor megjeleníti */
+            }
+
             header {
-                flex-direction: column;
-                text-align: center;
+                flex-direction: row;
+                justify-content: space-between;
             }
+
+            /* Hamburger menü gomb */
+            .hamburger {
+                display: block;
+            }
+
             img {
                 max-width: 50%; /* Mobilon kicsit nagyobbak legyenek */
             }
@@ -82,13 +103,13 @@
         th {
             background-color: #f2f2f2;
         }
-
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">Note Flow</a>
         <nav>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger ikon -->
             <ul>
                 <li><a href="index.html">Kezdőlap</a></li>
                 <li><a href="#kepek">Képek</a></li>
@@ -161,5 +182,11 @@
     <footer>
         <p>&copy; 2025 NoteFlow . Minden jog fenntartva.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('nav').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
