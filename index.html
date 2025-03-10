@@ -38,10 +38,9 @@
             padding: 20px;
         }
         img, video {
-            max-width: 100%;
+            max-width: 30%; /* Kisebb képek */
             height: auto;
-            display: block;
-            margin: 10px 0;
+            display: inline-block; /* Ne középre igazítson */
         }
         footer {
             text-align: center;
@@ -50,15 +49,8 @@
             color: white;
             margin-top: 20px;
         }
-        
-        /* Képek méretének szabályozása eszközök szerint */
-        @media (min-width: 1024px) {
-            img {
-                max-width: 50%; /* PC-n kisebb képek */
-                margin: 10px auto;
-            }
-        }
-        
+
+        /* Reszponzív beállítások */
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
@@ -67,6 +59,9 @@
             header {
                 flex-direction: column;
                 text-align: center;
+            }
+            img {
+                max-width: 50%; /* Mobilon kicsit nagyobbak legyenek */
             }
         }
     </style>
@@ -92,14 +87,14 @@
         </section>
 
         <section id="kepek">
-            <h2>Képek</h2>
+            <h1>Képek</h1>
             <p>Itt találhatók az oktatáshoz kapcsolódó képek.</p>
             <img src="example-image.jpg" alt="Példa kép">
             <img src="pelda.jpg" alt="Példa kép">
         </section>
 
         <section id="videok">
-            <h2>Videók</h2>
+            <h1>Videók</h1>
             <p>Tekintsd meg az oktatóvideóinkat.</p>
             <video controls>
                 <source src="example-video.mp4" type="video/mp4">
@@ -108,7 +103,7 @@
         </section>
 
         <section id="leckek">
-            <h2>Egyetemi leckék</h2>
+            <h1>Egyetemi leckék</h1>
             <p>Fedezd fel a hozzáférhető leckéket és tananyagokat!</p>
             <ul>
                 <li><a href="lecke1.pdf" target="_blank">Lecke 1 - Bevezetés</a></li>
@@ -117,14 +112,30 @@
         </section>
 
         <section id="elofizetesek">
-            <h2>Előfizetések</h2>
+            <h1>Előfizetések</h1>
             <p>Válassza ki az igényeinek megfelelő csomagot:</p>
-            <ul>
-                <li>Alapcsomag: 25 RON/hó</li>
-                <li>Egyetemi csomag: 49 RON/hó</li>
-                <li>Családi csomag: 79 RON/hó</li>
-                <li>Prémium jegyzet: 250 RON/hó</li>
-            </ul>
+            <table border="1">
+                <tr>
+                    <th>Csomag</th>
+                    <th>Ár</th>
+                </tr>
+                <tr>
+                    <td>Alapcsomag</td>
+                    <td>25 RON/hó</td>
+                </tr>
+                <tr>
+                    <td>Egyetemi csomag</td>
+                    <td>49 RON/hó</td>
+                </tr>
+                <tr>
+                    <td>Családi csomag</td>
+                    <td>79 RON/hó</td>
+                </tr>
+                <tr>
+                    <td>Prémium jegyzet</td>
+                    <td>250 RON/hó</td>
+                </tr>
+            </table>
         </section>
     </main>
 
