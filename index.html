@@ -63,23 +63,39 @@
         @media (max-width: 768px) {
             nav ul {
                 display: none; /* Elrejtjük a menüt alapértelmezetten */
-                flex-direction: row; /* A linkek vízszintesen */
+                flex-direction: column; /* Vízszintes menü helyett függőleges */
                 width: 100%;
-                justify-content: space-around;
+                justify-content: flex-start; /* A linkek a tetejére igazítva */
+                padding: 0; /* Töröljük a padding-ot */
+                background-color: white; /* A háttér színét állítjuk */
             }
-            
+
             nav.active ul {
                 display: flex; /* Ha az aktív osztály van, akkor megjeleníti */
             }
 
-            header {
-                flex-direction: row;
-                justify-content: space-between;
+            nav ul li {
+                width: 100%; /* A linkek kitöltik a teljes szélességet */
+                text-align: center; /* A linkek középre igazítása */
+                padding: 15px 0; /* Kicsit nagyobb belső margó a linkekhez */
+            }
+
+            nav ul li a {
+                color: black; /* Fekete linkek */
+                text-decoration: none;
+                display: block; /* A linkek blokkszintű elemek, így az egész terület kattintható */
+                font-size: 18px; /* Kisebb betűméret mobilon */
             }
 
             /* Hamburger menü gomb */
             .hamburger {
                 display: block;
+            }
+
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
             }
 
             img {
