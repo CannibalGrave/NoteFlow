@@ -50,6 +50,15 @@
             color: white;
             margin-top: 20px;
         }
+        
+        /* Képek méretének szabályozása eszközök szerint */
+        @media (min-width: 1024px) {
+            img {
+                max-width: 50%; /* PC-n kisebb képek */
+                margin: 10px auto;
+            }
+        }
+        
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
