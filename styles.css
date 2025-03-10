@@ -162,8 +162,45 @@ footer {
     }
 }
 
-/* Sticky footer (opcionális) */
-footer {
-    position: sticky;
-    bottom: 0;
+/* Táblázat */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Külön sorok, oszlopok összeolvadása */
+    margin-top: 30px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd; /* Vékonnyá tett szürke vonal */
+    font-size: 1em; /* Kisebb betűméret a táblázatban */
+}
+
+table th {
+    background-color: #f4f4f4; /* Halvány szürke háttér a fejlécnek */
+    color: #333; /* Sötétszürke szöveg */
+    font-weight: bold;
+    border-bottom: 2px solid #ddd; /* Erősebb alsó vonal a fejlécnél */
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Még világosabb háttér az páros soroknak */
+}
+
+table tr:hover {
+    background-color: #f1f1f1; /* Hover szín a sorokra */
+}
+
+/* A táblázat válasz sorainak vonalait is vékonyra állítjuk */
+table td {
+    border-bottom: 1px solid #ddd; /* Vékony vonal a válasz sorok között */
+}
+
+/* Reszponzivitás: ha a képernyő kisebb, akkor a táblázat horizontálisan görgethető legyen */
+@media (max-width: 768px) {
+    table {
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap;
+    }
 }
