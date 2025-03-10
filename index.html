@@ -16,6 +16,7 @@
             width: 100%;
             max-width: 100%;
             overflow-x: hidden;
+            background-color: #e0f7e0; /* Lágy zöld háttérszín */
         }
         header {
             display: flex;
@@ -31,7 +32,7 @@
             gap: 15px;
         }
         nav ul li a {
-            color: white;
+            color: black; /* Fekete linkek */
             text-decoration: none;
         }
         main {
@@ -64,6 +65,24 @@
                 max-width: 50%; /* Mobilon kicsit nagyobbak legyenek */
             }
         }
+
+        /* Táblázat stílus */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd; /* Egyvonalas táblázat határvonal */
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+
     </style>
 </head>
 <body>
@@ -114,7 +133,7 @@
         <section id="elofizetesek">
             <h1>Előfizetések</h1>
             <p>Válassza ki az igényeinek megfelelő csomagot:</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Csomag</th>
                     <th>Ár</th>
